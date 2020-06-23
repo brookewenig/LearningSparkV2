@@ -1,0 +1,253 @@
+course_info:
+  name: Learning-Spark
+  title: "Learning-Spark-v2"
+  version: "1.0.0"
+  type: ilt
+
+# Minimum version of build tools:
+bdc_min_version: "1.30"
+master_parse_min_version: "1.19"
+
+profiles:
+  - amazon: Amazon
+  - azure: Azure
+  
+student_dir: ""
+student_dbc: LearningSparkv2.dbc
+src_base: ../../modules
+
+notebook_type_name:
+  answers: Solutions
+  exercises: ""
+  instructor: ""
+
+notebook_defaults:
+  master:
+    enabled: true
+    scala: true
+    python: true
+    answers: false
+    instructor: false
+    enable_templates: false
+    instructor_notes: "instructor-notes/${target_basename}.md"
+    footer:
+      enabled: false
+    heading:
+      enabled: false
+
+misc_files:
+  -
+    src: CHANGELOG.md
+    dest: .
+
+notebooks:
+#
+# CH 2
+#
+  -
+    src: Learning-Spark-v2/Chapter02/2-1 Line Count.py
+    dest: "$target_lang/Chapter02/$basename.${target_extension}"
+
+  -
+    src: Learning-Spark-v2/Chapter02/2-2 M&M Count.py
+    dest: "$target_lang/Chapter02/$basename.${target_extension}"
+
+#
+# CH 3
+#
+  -
+    src: Learning-Spark-v2/Chapter03/3-1 Example 3.7.py
+    dest: "$target_lang/Chapter03/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter03/3-2 San Francisco Fire Calls.py
+    dest: "$target_lang/Chapter03/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter03/3-3 IoT Devices.scala
+    dest: "$target_lang/Chapter03/$basename.${target_extension}"
+    master:
+      python: false
+#
+# CH 4
+#
+  -
+    src: Learning-Spark-v2/Chapter04/4-1 Example 4.1.py
+    dest: "$target_lang/Chapter04/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter04/4-2 Spark Data Sources.py
+    dest: "$target_lang/Chapter04/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter04/4-3 Spark Tables.py
+    dest: "$target_lang/Chapter04/$basename.${target_extension}"
+
+#
+# CH 5
+#
+  -
+    src: Learning-Spark-v2/Chapter05/5-1 Spark SQL & UDFs.py
+    dest: "$target_lang/Chapter05/$basename.${target_extension}"
+
+#
+# CH 6
+#
+  -
+    src: Learning-Spark-v2/Chapter06/6-1 Example 6.3.scala
+    dest: "$target_lang/Chapter06/$basename.${target_extension}"
+    master:
+      python: false
+  -
+    src: Learning-Spark-v2/Chapter06/6-2 Dataset API.py
+    dest: "$target_lang/Chapter06/$basename.${target_extension}"
+    master:
+      python: false
+
+#
+# CH 7
+#
+  -
+    src: Learning-Spark-v2/Chapter07/7-1 Spark Configs.scala
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+    master:
+      python: false
+  -
+    src: Learning-Spark-v2/Chapter07/7-2 Partitions.scala
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+    master:
+      python: false
+  -
+    src: Learning-Spark-v2/Chapter07/7-3 Map & MapPartitions.scala
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+    master:
+      python: false
+  -
+    src: Learning-Spark-v2/Chapter07/7-4 Vectorized UDFs.scala
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter07/7-5 Caching Data.scala
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter07/7-6 Sort Merge Join.scala
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+    master:
+      python: false
+  -
+    src: Learning-Spark-v2/Chapter07/7-7 Whole-stage code generation.scala
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+    master:
+      python: false
+  -
+    src: Learning-Spark-v2/Chapter07/7-8 File Formats.py
+    dest: "$target_lang/Chapter07/$basename.${target_extension}"
+
+#
+# CH 8
+# 
+  -
+    src: Learning-Spark-v2/Chapter08/README.py
+    dest: "$target_lang/Chapter08/$basename.${target_extension}"
+  # -
+  #   src: Learning-Spark-v2/Chapter08/8-1 The Fundamentals of a Streaming Query.py
+  #   dest: "$target_lang/Chapter08/$basename.${target_extension}"
+  # -
+  #   src: Learning-Spark-v2/Chapter08/8-2 Streaming Data Sources and Sinks.py
+  #   dest: "$target_lang/Chapter08/$basename.${target_extension}"
+  # -
+  #   src: Learning-Spark-v2/Chapter08/8-3 Streaming Aggregations and Joins.py
+  #   dest: "$target_lang/Chapter08/$basename.${target_extension}"
+  # -
+  #   src: Learning-Spark-v2/Chapter08/8-4 Arbitrary Stateful Computations.py
+  #   dest: "$target_lang/Chapter08/$basename.${target_extension}"
+  # -
+  #   src: Learning-Spark-v2/Chapter08/08-5 Monitoring Queries.scala
+  #   dest: "$target_lang/Chapter08/$basename.${target_extension}"
+
+# 
+# CH 09
+#
+  -
+    src: Learning-Spark-v2/Chapter09/9-1 Delta Lake.py
+    dest: "$target_lang/Chapter09/$basename.${target_extension}"
+
+
+#
+# CH 10
+#
+
+  -
+    src: Learning-Spark-v2/Chapter10/10-1 Data Cleansing.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter10/10-2 Linear Regression.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter10/10-3 Baseline Model.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter10/10-4 One Hot Encoding.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter10/10-5 Log Scale.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter10/10-6 Decision Trees.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter10/10-7 Hyperparameter Tuning.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter10/10-8 K-Means.py
+    dest: "$target_lang/Chapter10/$basename.${target_extension}"
+
+# 
+# CH 11
+# 
+  -
+    src: Learning-Spark-v2/Chapter11/README.py
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter11/11-1 MLflow.py
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+    master:
+      scala: False
+  -
+    src: Learning-Spark-v2/Chapter11/11-2 XGBoost.py
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+  -
+    src: "Learning-Spark-v2/Chapter11/11-3 Distributed Inference.py"
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+    master:
+      scala: False
+  -
+    src: "Learning-Spark-v2/Chapter11/11-4 Distributed IoT Model Training.py"
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+    master:
+      scala: False
+  -
+    src: Learning-Spark-v2/Chapter11/11-5 Joblib.py
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+    master:
+      scala: False
+  -
+    src: Learning-Spark-v2/Chapter11/11-6 Hyperopt.py
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+    master:
+      scala: False
+  -
+    src: Learning-Spark-v2/Chapter11/11-7 Koalas.py
+    dest: "$target_lang/Chapter11/$basename.${target_extension}"
+    master:
+      scala: False
+
+# 
+# CH 12
+# 
+  -
+    src: Learning-Spark-v2/Chapter12/12-1 Dataset and SQL Explain.py
+    dest: "$target_lang/Chapter12/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter12/12-2 AQE.sql
+    dest: "$target_lang/Chapter12/$basename.${target_extension}"
+  -
+    src: Learning-Spark-v2/Chapter12/12-3 Pandas UDFs.py
+    dest: "$target_lang/Chapter12/$basename.${target_extension}"
+    master:
+      scala: false
